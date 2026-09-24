@@ -55,7 +55,9 @@ a{
   text-decoration:none;
 }
 
-/* INTRO */
+/* =========================
+   INTRO
+========================= */
 
 #intro{
   position:fixed;
@@ -110,9 +112,16 @@ a{
   cursor:pointer;
   background:linear-gradient(135deg,var(--pink),var(--purple));
   box-shadow:0 15px 50px #ff4f9160;
+  transition:.3s;
 }
 
-/* PROGRESS */
+.open-btn:hover{
+  transform:translateY(-3px) scale(1.03);
+}
+
+/* =========================
+   PROGRESS
+========================= */
 
 #progress{
   position:fixed;
@@ -121,10 +130,17 @@ a{
   width:0;
   height:3px;
   z-index:5000;
-  background:linear-gradient(90deg,var(--pink),var(--gold),var(--purple));
+  background:linear-gradient(
+    90deg,
+    var(--pink),
+    var(--gold),
+    var(--purple)
+  );
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
 
 nav{
   position:fixed;
@@ -158,9 +174,12 @@ nav a{
 
 nav a:hover{
   background:#ffffff14;
+  color:#fff;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
   min-height:100svh;
@@ -196,9 +215,17 @@ nav a:hover{
 }
 
 .gradient-text{
-  background:linear-gradient(90deg,#fff,#ff9fc4,#ffd889,#fff);
+  background:
+    linear-gradient(
+      90deg,
+      #fff,
+      #ff9fc4,
+      #ffd889,
+      #fff
+    );
   background-size:300%;
   -webkit-background-clip:text;
+  background-clip:text;
   color:transparent;
   animation:shine 6s linear infinite;
 }
@@ -231,8 +258,18 @@ nav a:hover{
   border-radius:999px;
   cursor:pointer;
   color:#fff;
-  background:linear-gradient(135deg,var(--pink),var(--purple));
+  background:
+    linear-gradient(
+      135deg,
+      var(--pink),
+      var(--purple)
+    );
   box-shadow:0 10px 35px #ff4f9135;
+  transition:.3s;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
 }
 
 .btn.secondary{
@@ -241,7 +278,9 @@ nav a:hover{
   box-shadow:none;
 }
 
-/* SECTIONS */
+/* =========================
+   SECTIONS
+========================= */
 
 section{
   padding:100px 17px;
@@ -285,7 +324,9 @@ section{
   backdrop-filter:blur(15px);
 }
 
-/* LETTER */
+/* =========================
+   LETTER
+========================= */
 
 .letter{
   max-width:850px;
@@ -305,7 +346,9 @@ section{
   color:#ff9fc4;
 }
 
-/* COUNTDOWN */
+/* =========================
+   COUNTDOWN
+========================= */
 
 .countdown{
   display:grid;
@@ -331,7 +374,9 @@ section{
   font-size:13px;
 }
 
-/* GALLERY */
+/* =========================
+   GALLERY
+========================= */
 
 .gallery{
   display:grid;
@@ -371,9 +416,12 @@ section{
   border-radius:17px;
   background:#07030bcc;
   backdrop-filter:blur(10px);
+  color:#fff;
 }
 
-/* LIGHTBOX */
+/* =========================
+   LIGHTBOX
+========================= */
 
 #lightbox{
   position:fixed;
@@ -394,18 +442,23 @@ section{
   max-width:95%;
   max-height:90vh;
   border-radius:20px;
+  box-shadow:0 20px 80px #000;
 }
 
 .close-lightbox{
   position:absolute;
   top:20px;
   right:25px;
-  font-size:35px;
+  font-size:40px;
+  line-height:1;
   color:#fff;
   cursor:pointer;
+  z-index:2;
 }
 
-/* VIDEOS */
+/* =========================
+   VIDEOS
+========================= */
 
 .videos{
   display:grid;
@@ -428,7 +481,9 @@ section{
   color:#e3ccd8;
 }
 
-/* REASONS */
+/* =========================
+   REASONS
+========================= */
 
 .reasons{
   display:grid;
@@ -454,7 +509,9 @@ section{
   line-height:1.8;
 }
 
-/* TIMELINE */
+/* =========================
+   TIMELINE
+========================= */
 
 .timeline{
   max-width:800px;
@@ -487,7 +544,9 @@ section{
   line-height:1.8;
 }
 
-/* SURPRISE */
+/* =========================
+   SURPRISE
+========================= */
 
 .surprise{
   text-align:center;
@@ -526,13 +585,16 @@ section{
     opacity:0;
     transform:translateY(20px);
   }
+
   to{
     opacity:1;
     transform:none;
   }
 }
 
-/* CAKE */
+/* =========================
+   CAKE
+========================= */
 
 .cake{
   text-align:center;
@@ -561,9 +623,12 @@ section{
 
 .wish.show{
   display:block;
+  animation:appear .8s ease;
 }
 
-/* MUSIC */
+/* =========================
+   MUSIC
+========================= */
 
 .music-btn{
   position:fixed;
@@ -581,7 +646,9 @@ section{
   backdrop-filter:blur(10px);
 }
 
-/* HEARTS */
+/* =========================
+   HEARTS / STARS / CONFETTI
+========================= */
 
 #hearts,
 #confetti,
@@ -635,12 +702,16 @@ section{
 
 @keyframes fall{
   to{
-    transform:translateY(110vh) rotate(720deg);
+    transform:
+      translateY(110vh)
+      rotate(720deg);
     opacity:0;
   }
 }
 
-/* CURSOR */
+/* =========================
+   CURSOR
+========================= */
 
 .cursor-heart{
   position:fixed;
@@ -657,7 +728,9 @@ section{
   }
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   text-align:center;
@@ -671,7 +744,9 @@ footer b{
   color:#ff8db7;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:750px){
 
@@ -710,13 +785,30 @@ footer b{
   .photo img{
     min-height:330px;
   }
+
+  .hero h1{
+    font-size:clamp(65px,19vw,100px);
+  }
+
+  .heading h2{
+    font-size:clamp(48px,14vw,70px);
+  }
+
+  .gift,
+  .cake-icon{
+    font-size:90px;
+  }
 }
 </style>
 </head>
 
+
 <body class="lock">
 
-<!-- OPENING -->
+
+<!-- =========================
+     OPENING
+========================= -->
 
 <div id="intro">
 
@@ -735,7 +827,10 @@ footer b{
       দরজা খুলে ভেতরে এসো... ❤️
     </p>
 
-    <button class="open-btn" onclick="enterSite()">
+    <button
+      class="open-btn"
+      onclick="enterSite()"
+    >
       ✨ Open Your Surprise
     </button>
 
@@ -751,7 +846,9 @@ footer b{
 <div id="confetti"></div>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -766,9 +863,14 @@ footer b{
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<header class="hero" id="home">
+<header
+  class="hero"
+  id="home"
+>
 
   <div class="hero-content">
 
@@ -777,11 +879,14 @@ footer b{
     </div>
 
     <h1>
+
       <span class="gradient-text">
         শুভ জন্মদিন<br>
         ডালিমা
       </span>
+
       ❤️
+
     </h1>
 
     <p>
@@ -792,11 +897,17 @@ footer b{
 
     <div class="buttons">
 
-      <a class="btn" href="#letter">
+      <a
+        class="btn"
+        href="#letter"
+      >
         💌 আমার চিঠি
       </a>
 
-      <a class="btn secondary" href="#gift">
+      <a
+        class="btn secondary"
+        href="#gift"
+      >
         🎁 Surprise
       </a>
 
@@ -807,7 +918,9 @@ footer b{
 </header>
 
 
-<!-- LETTER -->
+<!-- =========================
+     LETTER
+========================= -->
 
 <section id="letter">
 
@@ -874,7 +987,9 @@ footer b{
 </section>
 
 
-<!-- COUNTDOWN -->
+<!-- =========================
+     COUNTDOWN
+========================= -->
 
 <section id="countdown">
 
@@ -896,23 +1011,54 @@ footer b{
     <div class="countdown">
 
       <div class="glass time-box">
-        <b id="days">00</b>
-        <span>দিন</span>
+
+        <b id="days">
+          00
+        </b>
+
+        <span>
+          দিন
+        </span>
+
       </div>
 
-      <div class="glass time-box">
-        <b id="hours">00</b>
-        <span>ঘণ্টা</span>
-      </div>
 
       <div class="glass time-box">
-        <b id="minutes">00</b>
-        <span>মিনিট</span>
+
+        <b id="hours">
+          00
+        </b>
+
+        <span>
+          ঘণ্টা
+        </span>
+
       </div>
 
+
       <div class="glass time-box">
-        <b id="seconds">00</b>
-        <span>সেকেন্ড</span>
+
+        <b id="minutes">
+          00
+        </b>
+
+        <span>
+          মিনিট
+        </span>
+
+      </div>
+
+
+      <div class="glass time-box">
+
+        <b id="seconds">
+          00
+        </b>
+
+        <span>
+          সেকেন্ড
+        </span>
+
       </div>
 
     </div>
@@ -922,7 +1068,9 @@ footer b{
 </section>
 
 
-<!-- GALLERY -->
+<!-- =========================
+     GALLERY
+========================= -->
 
 <section id="gallery">
 
@@ -935,11 +1083,11 @@ footer b{
       </small>
 
       <h2>
-        আমাদের সুন্দর স্মৃতি 📸
+        ডালিমার সুন্দর স্মৃতি 📸
       </h2>
 
       <p>
-        ছবিতে ক্লিক করলে বড় করে দেখা যাবে।
+        ছবিতে ক্লিক করলে বড় করে দেখা যাবে। ❤️
       </p>
 
     </div>
@@ -947,48 +1095,66 @@ footer b{
 
     <div class="gallery">
 
-      <div class="photo" onclick="openImage('images/photo1.jpg')">
 
-        <img src="images/photo1.jpg" alt="Memory 1">
+      <!-- PHOTO 1 -->
+
+      <div
+        class="photo"
+        onclick="openImage('images/photo1.jpg')"
+      >
+
+        <img
+          src="images/photo1.jpg"
+          alt="Dalima Memory 1"
+          loading="lazy"
+        >
 
         <div class="photo-caption">
-          ❤️ আমাদের একটি সুন্দর স্মৃতি
+          💗 তোমার হাসিটা আমার সবচেয়ে প্রিয়
         </div>
 
       </div>
 
 
-      <div class="photo" onclick="openImage('images/photo2.jpg')">
+      <!-- PHOTO 2 -->
 
-        <img src="images/photo2.jpg" alt="Memory 2">
+      <div
+        class="photo"
+        onclick="openImage('images/photo2.jpg')"
+      >
+
+        <img
+          src="images/photo2.jpg"
+          alt="Dalima Memory 2"
+          loading="lazy"
+        >
 
         <div class="photo-caption">
-          🌹 তোমার হাসিটা সবচেয়ে সুন্দর
+          🌹 শাড়িতে তোমাকে অসম্ভব সুন্দর লাগে
         </div>
 
       </div>
 
 
-      <div class="photo" onclick="openImage('images/photo3.jpg')">
+      <!-- PHOTO 3 -->
 
-        <img src="images/photo3.jpg" alt="Memory 3">
+      <div
+        class="photo"
+        onclick="openImage('images/photo3.jpg')"
+      >
+
+        <img
+          src="images/photo3.jpg"
+          alt="Dalima Memory 3"
+          loading="lazy"
+        >
 
         <div class="photo-caption">
-          💕 ভালোবাসার ছোট্ট মুহূর্ত
+          ❤️ এই ছবিটাও আমার খুব প্রিয়
         </div>
 
       </div>
 
-
-      <div class="photo" onclick="openImage('images/photo4.jpg')">
-
-        <img src="images/photo4.jpg" alt="Memory 4">
-
-        <div class="photo-caption">
-          ✨ আরও অনেক স্মৃতি বাকি
-        </div>
-
-      </div>
 
     </div>
 
@@ -997,20 +1163,31 @@ footer b{
 </section>
 
 
-<!-- LIGHTBOX -->
+<!-- =========================
+     LIGHTBOX
+========================= -->
 
-<div id="lightbox" onclick="closeImage()">
+<div
+  id="lightbox"
+  onclick="closeImage()"
+>
 
   <span class="close-lightbox">
     ×
   </span>
 
-  <img id="lightbox-img" src="" alt="Large Memory">
+  <img
+    id="lightbox-img"
+    src=""
+    alt="Large Dalima Memory"
+  >
 
 </div>
 
 
-<!-- VIDEOS -->
+<!-- =========================
+     VIDEOS
+========================= -->
 
 <section id="videos">
 
@@ -1035,11 +1212,19 @@ footer b{
 
     <div class="videos">
 
+
       <div class="glass video-card">
 
-        <video controls playsinline preload="metadata">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
 
-          <source src="videos/video1.mp4" type="video/mp4">
+          <source
+            src="videos/video1.mp4"
+            type="video/mp4"
+          >
 
           তোমার ব্রাউজার ভিডিওটি চালাতে পারছে না।
 
@@ -1054,9 +1239,16 @@ footer b{
 
       <div class="glass video-card">
 
-        <video controls playsinline preload="metadata">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
 
-          <source src="videos/video2.mp4" type="video/mp4">
+          <source
+            src="videos/video2.mp4"
+            type="video/mp4"
+          >
 
           তোমার ব্রাউজার ভিডিওটি চালাতে পারছে না।
 
@@ -1068,6 +1260,7 @@ footer b{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1075,7 +1268,9 @@ footer b{
 </section>
 
 
-<!-- REASONS -->
+<!-- =========================
+     REASONS
+========================= -->
 
 <section>
 
@@ -1095,6 +1290,7 @@ footer b{
 
 
     <div class="reasons">
+
 
       <div class="glass reason">
 
@@ -1149,6 +1345,7 @@ footer b{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1156,7 +1353,9 @@ footer b{
 </section>
 
 
-<!-- STORY -->
+<!-- =========================
+     STORY
+========================= -->
 
 <section id="story">
 
@@ -1176,6 +1375,7 @@ footer b{
 
 
     <div class="timeline">
+
 
       <div class="story">
 
@@ -1244,6 +1444,7 @@ footer b{
 
       </div>
 
+
     </div>
 
   </div>
@@ -1251,7 +1452,9 @@ footer b{
 </section>
 
 
-<!-- SURPRISE GIFT -->
+<!-- =========================
+     SURPRISE GIFT
+========================= -->
 
 <section id="gift">
 
@@ -1276,12 +1479,18 @@ footer b{
 
     <div class="glass surprise">
 
-      <div class="gift" onclick="openGift()">
+      <div
+        class="gift"
+        onclick="openGift()"
+      >
         🎁
       </div>
 
 
-      <div id="secret" class="secret">
+      <div
+        id="secret"
+        class="secret"
+      >
 
         ডালিমা ❤️
 
@@ -1317,7 +1526,9 @@ footer b{
 </section>
 
 
-<!-- CAKE -->
+<!-- =========================
+     CAKE
+========================= -->
 
 <section>
 
@@ -1340,10 +1551,15 @@ footer b{
         কেকটায় ক্লিক করো এবং তোমার জন্য একটি Wish দেখো।
       </p>
 
-      <div id="wish" class="wish">
+      <div
+        id="wish"
+        class="wish"
+      >
 
         ✨ তোমার প্রতিটি স্বপ্ন পূরণ হোক।<br>
+
         তোমার প্রতিটি দিন হাসিতে ভরে উঠুক।<br>
+
         তোমার জীবনে ভালোবাসা আর আনন্দ কখনো কমে না যাক। ❤️
 
         <br><br>
@@ -1361,7 +1577,9 @@ footer b{
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -1369,7 +1587,9 @@ footer b{
 
   <br><br>
 
-  <b>Dalima</b>
+  <b>
+    Dalima
+  </b>
 
   <br><br>
 
@@ -1378,11 +1598,22 @@ footer b{
 </footer>
 
 
-<!-- MUSIC -->
+<!-- =========================
+     MUSIC
+========================= -->
 
-<audio id="music" loop>
-  <source src="music.mp3" type="audio/mpeg">
+<audio
+  id="music"
+  loop
+>
+
+  <source
+    src="music.mp3"
+    type="audio/mpeg"
+  >
+
 </audio>
+
 
 <button
   class="music-btn"
@@ -1395,7 +1626,9 @@ footer b{
 
 <script>
 
-/* ENTER */
+/* =========================
+   ENTER SITE
+========================= */
 
 function enterSite(){
 
@@ -1410,18 +1643,35 @@ function enterSite(){
     .remove("lock");
 
   createStars();
-
   createHearts();
 
   const music =
     document.getElementById("music");
 
-  music.play().catch(()=>{});
+  music
+    .play()
+    .then(()=>{
+
+      document
+        .getElementById("musicButton")
+        .textContent="🔊";
+
+    })
+    .catch(()=>{
+
+      /*
+        Browser autoplay block করলে
+        music button দিয়ে চালানো যাবে।
+      */
+
+    });
 
 }
 
 
-/* MUSIC */
+/* =========================
+   MUSIC
+========================= */
 
 function toggleMusic(){
 
@@ -1431,14 +1681,22 @@ function toggleMusic(){
   const button =
     document.getElementById("musicButton");
 
+
   if(music.paused){
 
-    music.play()
+    music
+      .play()
       .then(()=>{
+
         button.textContent="🔊";
+
       })
       .catch(()=>{
-        alert("music.mp3 ফাইলটি পাওয়া যায়নি।");
+
+        alert(
+          "music.mp3 ফাইলটি পাওয়া যায়নি।"
+        );
+
       });
 
   }else{
@@ -1452,7 +1710,9 @@ function toggleMusic(){
 }
 
 
-/* IMAGE LIGHTBOX */
+/* =========================
+   IMAGE LIGHTBOX
+========================= */
 
 function openImage(src){
 
@@ -1466,6 +1726,8 @@ function openImage(src){
 
   lightbox.classList.add("show");
 
+  document.body.classList.add("lock");
+
 }
 
 
@@ -1476,10 +1738,14 @@ function closeImage(){
     .classList
     .remove("show");
 
+  document.body.classList.remove("lock");
+
 }
 
 
-/* GIFT */
+/* =========================
+   GIFT
+========================= */
 
 function openGift(){
 
@@ -1489,13 +1755,14 @@ function openGift(){
     .toggle("show");
 
   createConfetti();
-
   createHearts();
 
 }
 
 
-/* CAKE */
+/* =========================
+   CAKE
+========================= */
 
 function makeWish(){
 
@@ -1506,10 +1773,14 @@ function makeWish(){
 
   createConfetti();
 
+  createHearts();
+
 }
 
 
-/* STARS */
+/* =========================
+   STARS
+========================= */
 
 function createStars(){
 
@@ -1518,6 +1789,7 @@ function createStars(){
 
   container.innerHTML="";
 
+
   for(let i=0;i<100;i++){
 
     const star =
@@ -1525,17 +1797,22 @@ function createStars(){
 
     star.className="star";
 
+
     star.style.left =
       Math.random()*100+"%";
+
 
     star.style.top =
       Math.random()*100+"%";
 
+
     star.style.opacity =
       Math.random();
 
+
     star.style.animationDelay =
       Math.random()*4+"s";
+
 
     container.appendChild(star);
 
@@ -1544,42 +1821,65 @@ function createStars(){
 }
 
 
-/* HEARTS */
+/* =========================
+   HEARTS
+========================= */
 
 function createHearts(){
 
   const container =
     document.getElementById("hearts");
 
+
   for(let i=0;i<18;i++){
 
     const heart =
       document.createElement("div");
 
+
     heart.className="heart";
 
+
     heart.textContent =
-      ["❤️","💗","💕","💖","💘","🌹"]
-      [Math.floor(Math.random()*6)];
+      [
+        "❤️",
+        "💗",
+        "💕",
+        "💖",
+        "💘",
+        "🌹"
+      ][
+        Math.floor(
+          Math.random()*6
+        )
+      ];
+
 
     heart.style.left =
       Math.random()*100+"%";
 
+
     heart.style.fontSize =
       (14+Math.random()*24)+"px";
 
+
     heart.style.animationDuration =
       (5+Math.random()*5)+"s";
+
 
     heart.style.setProperty(
       "--move",
       (Math.random()*180-90)+"px"
     );
 
+
     container.appendChild(heart);
 
+
     setTimeout(()=>{
+
       heart.remove();
+
     },10000);
 
   }
@@ -1587,12 +1887,15 @@ function createHearts(){
 }
 
 
-/* CONFETTI */
+/* =========================
+   CONFETTI
+========================= */
 
 function createConfetti(){
 
   const container =
     document.getElementById("confetti");
+
 
   const colors=[
     "#ff4f91",
@@ -1602,28 +1905,39 @@ function createConfetti(){
     "#ff9fc4"
   ];
 
+
   for(let i=0;i<100;i++){
 
     const piece =
       document.createElement("div");
 
+
     piece.className="confetti";
+
 
     piece.style.left =
       Math.random()*100+"%";
 
+
     piece.style.background =
       colors[
-        Math.floor(Math.random()*colors.length)
+        Math.floor(
+          Math.random()*colors.length
+        )
       ];
+
 
     piece.style.animationDelay =
       Math.random()*1.5+"s";
 
+
     container.appendChild(piece);
 
+
     setTimeout(()=>{
+
       piece.remove();
+
     },5500);
 
   }
@@ -1631,7 +1945,9 @@ function createConfetti(){
 }
 
 
-/* SCROLL PROGRESS */
+/* =========================
+   SCROLL PROGRESS
+========================= */
 
 window.addEventListener(
   "scroll",
@@ -1640,14 +1956,17 @@ window.addEventListener(
     const top =
       document.documentElement.scrollTop;
 
+
     const height =
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
+
 
     const percent =
       height > 0
       ? (top/height)*100
       : 0;
+
 
     document
       .getElementById("progress")
@@ -1658,7 +1977,9 @@ window.addEventListener(
 );
 
 
-/* CURSOR HEART */
+/* =========================
+   CURSOR HEART
+========================= */
 
 document.addEventListener(
   "mousemove",
@@ -1668,25 +1989,34 @@ document.addEventListener(
       return;
     }
 
+
     if(Math.random()>0.82){
 
       const heart =
         document.createElement("div");
 
+
       heart.className="cursor-heart";
 
+
       heart.textContent="❤";
+
 
       heart.style.left =
         event.clientX+"px";
 
+
       heart.style.top =
         event.clientY+"px";
 
+
       document.body.appendChild(heart);
 
+
       setTimeout(()=>{
+
         heart.remove();
+
       },800);
 
     }
@@ -1695,7 +2025,9 @@ document.addEventListener(
 );
 
 
-/* AUTO HEARTS */
+/* =========================
+   AUTO HEARTS
+========================= */
 
 setInterval(
   createHearts,
@@ -1703,16 +2035,58 @@ setInterval(
 );
 
 
-/* COUNTDOWN */
-/*
-  এখানে তোমার Birthday date বসাতে পারো।
+/* =========================
+   COUNTDOWN
+========================= */
 
-  উদাহরণ:
-  "2026-09-24T00:00:00"
+/*
+   আজ ২৪ সেপ্টেম্বর ২০২৬।
+
+   যদি ২৪ সেপ্টেম্বর জন্মদিন হয়,
+   তাহলে আজকের মুহূর্ত ইতোমধ্যে
+   পার হয়ে গেলে পরের ২৪ সেপ্টেম্বর
+   পর্যন্ত Countdown দেখাবে।
 */
 
+function getNextBirthday(){
+
+  const now =
+    new Date();
+
+  let year =
+    now.getFullYear();
+
+  let next =
+    new Date(
+      year,
+      8,
+      24,
+      0,
+      0,
+      0
+    );
+
+  if(next <= now){
+
+    next =
+      new Date(
+        year + 1,
+        8,
+        24,
+        0,
+        0,
+        0
+      );
+
+  }
+
+  return next.getTime();
+
+}
+
+
 const birthday =
-  new Date("2026-09-24T00:00:00").getTime();
+  getNextBirthday();
 
 
 function updateCountdown(){
@@ -1720,8 +2094,10 @@ function updateCountdown(){
   const now =
     new Date().getTime();
 
+
   let distance =
     birthday-now;
+
 
   if(distance<0){
 
@@ -1729,45 +2105,70 @@ function updateCountdown(){
 
   }
 
+
   const days =
     Math.floor(
-      distance/(1000*60*60*24)
+      distance /
+      (1000*60*60*24)
     );
+
 
   const hours =
     Math.floor(
-      (distance%(1000*60*60*24))/
+      (distance %
+      (1000*60*60*24)) /
       (1000*60*60)
     );
 
+
   const minutes =
     Math.floor(
-      (distance%(1000*60*60))/
+      (distance %
+      (1000*60*60)) /
       (1000*60)
     );
 
+
   const seconds =
     Math.floor(
-      (distance%(1000*60))/
+      (distance %
+      (1000*60)) /
       1000
     );
 
-  document.getElementById("days")
-    .textContent=String(days).padStart(2,"0");
 
-  document.getElementById("hours")
-    .textContent=String(hours).padStart(2,"0");
+  document
+    .getElementById("days")
+    .textContent =
+    String(days)
+      .padStart(2,"0");
 
-  document.getElementById("minutes")
-    .textContent=String(minutes).padStart(2,"0");
 
-  document.getElementById("seconds")
-    .textContent=String(seconds).padStart(2,"0");
+  document
+    .getElementById("hours")
+    .textContent =
+    String(hours)
+      .padStart(2,"0");
+
+
+  document
+    .getElementById("minutes")
+    .textContent =
+    String(minutes)
+      .padStart(2,"0");
+
+
+  document
+    .getElementById("seconds")
+    .textContent =
+    String(seconds)
+      .padStart(2,"0");
 
 }
 
 
 updateCountdown();
+
 
 setInterval(
   updateCountdown,
@@ -1775,7 +2176,9 @@ setInterval(
 );
 
 
-/* ESC TO CLOSE IMAGE */
+/* =========================
+   ESC TO CLOSE IMAGE
+========================= */
 
 document.addEventListener(
   "keydown",
@@ -1790,7 +2193,22 @@ document.addEventListener(
   }
 );
 
+
+/* =========================
+   CLICK LIGHTBOX IMAGE
+   করলে বন্ধ হবে না
+========================= */
+
+document
+  .getElementById("lightbox-img")
+  .addEventListener(
+    "click",
+    (event)=>{
+      event.stopPropagation();
+    }
+  );
+
 </script>
 
 </body>
-                                    </html>
+  </html>
